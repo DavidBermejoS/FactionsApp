@@ -18,6 +18,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private Button unicabraButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,29 +32,28 @@ public class MainActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
+                R.id.nav_tools, R.id.nav_share, R.id.nav_send, R.id.unicabraButton)
                 .setDrawerLayout(drawer)
                 .build();
-        setUnicabraButton();
+//        setUnicabraButton();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
-    /**
-     * This method insert the logic of the unicabra button.
-     */
-    private void setUnicabraButton() {
-        Button buttonUnicabra = findViewById(R.id.unicabraButton);
-        buttonUnicabra.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse("http://www.unicabra.es");
-                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
-                startActivity(intent);
-            }
-        });
-    }
+//    /**
+//     * This method insert the logic of the unicabra button.
+//     */
+//    private void setUnicabraButton() {
+//        unicabraButton.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                Uri uri = Uri.parse("http://www.unicabra.es");
+//                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+//                startActivity(intent);
+//            }
+//        });
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
