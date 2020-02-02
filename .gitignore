@@ -12,3 +12,8 @@
 /captures
 .externalNativeBuild
 .cxx
+
+*.png
+/drawable
+/drawable-v24
+
