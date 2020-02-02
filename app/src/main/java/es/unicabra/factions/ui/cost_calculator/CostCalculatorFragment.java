@@ -1,27 +1,24 @@
-package es.unicabra.factions.ui.slideshow;
+package es.unicabra.factions.ui.cost_calculator;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import es.unicabra.factions.R;
 
-public class SlideshowFragment extends Fragment {
+public class CostCalculatorFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private CostCalculatorViewModel costCalculatorViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
+        costCalculatorViewModel =
+                ViewModelProviders.of(this).get(CostCalculatorViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_cost_calculator, container, false);
 //put here some code to attach more elements
         return root;
     }

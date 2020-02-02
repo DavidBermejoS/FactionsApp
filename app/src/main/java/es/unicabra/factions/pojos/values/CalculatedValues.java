@@ -3,13 +3,13 @@ package es.unicabra.factions.pojos.values;
 
 import java.io.Serializable;
 
-import es.unicabra.factions.ui.tools.ToolsFragment;
+import es.unicabra.factions.ui.tools.RollSimulatorFragment;
 
 /**
  * <b>InitialValues Class</b>
  * This class is maded to storage all the calculated values by the formula of attack and defense to
  * liberate the fragment of calculable values.
- * @see ToolsFragment
+ * @see RollSimulatorFragment
  * @author David Bermejo Simón.
  */
 public class CalculatedValues implements Serializable {
