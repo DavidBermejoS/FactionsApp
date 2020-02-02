@@ -15,21 +15,21 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import es.unicabra.factions.R;
 import es.unicabra.factions.ToolResultsActivity;
-import es.unicabra.factions.controllers.ToolsController;
+import es.unicabra.factions.controllers.RollSimulatorController;
 
 /**
- * <b>ToolsFragment</b>
+ * <b>RollSimulatorFragment</b>
  * This fragment contains all code relative to the functionality
  * of Dice´s rolls calculator. This calculator give as result
  * the average of an imaginary number of rolls and all the results (stored in a matrix).
  *
  * @author David Bermejo Simón.
  */
-public class ToolsFragment extends Fragment {
+public class RollSimulatorFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
-    private ToolsController controller;
-//    private ToolsController controller;
+    private RollSimulatorViewModel rollSimulatorViewModel;
+    private RollSimulatorController controller;
+//    private RollSimulatorController controller;
 
     //with this objects we access the GUI to show the user the calculated parameters.
     private Button rollButton;
@@ -47,9 +47,9 @@ public class ToolsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
+        rollSimulatorViewModel =
+                ViewModelProviders.of(this).get(RollSimulatorViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_roll_simulator, container, false);
         instantiateGUIObjects(root);
         addListenerToRollButton();
         addListenerToResultsButton();
@@ -92,7 +92,7 @@ public class ToolsFragment extends Fragment {
                     int rolls = Integer.parseInt(String.valueOf(editTextRolls.getText()));
                     int dices = Integer.parseInt(String.valueOf(editTextDices.getText()));
                     //instantiate new controller
-                    controller = new ToolsController(rolls, dices);
+                    controller = new RollSimulatorController(rolls, dices);
                     //Fill the initial values to calculate from GUI
                     fillControllerInitialValues(controller);
                     //Calculate results with controller object.
@@ -130,7 +130,7 @@ public class ToolsFragment extends Fragment {
      *
      * @param controller: controller responsible of calculate all the results to show.
      */
-    private void fillControllerInitialValues(ToolsController controller) {
+    private void fillControllerInitialValues(RollSimulatorController controller) {
         controller.getInitialValues().setAttackFixedValue
                 (Integer.parseInt(String.valueOf(attackFixedValue.getText())));
         controller.getInitialValues().setAttackVariableValue
@@ -148,7 +148,7 @@ public class ToolsFragment extends Fragment {
      *
      * @param controller: controller responsible of calculate all the results to show.
      */
-    private void addGUIValues(ToolsController controller) {
+    private void addGUIValues(RollSimulatorController controller) {
         textAverage.setText(String.valueOf(controller.getCalculatedValues().getAverage()));
         textMode.setText(String.valueOf(controller.getCalculatedValues().getMode()));
         textMaxMin.setText(String.valueOf(controller.getCalculatedValues().getMax())

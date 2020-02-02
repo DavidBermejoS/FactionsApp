@@ -4,18 +4,19 @@ import java.util.Random;
 import es.unicabra.factions.pojos.values.CalculatedValues;
 import es.unicabra.factions.pojos.values.InitialValues;
 import es.unicabra.factions.pojos.values.Values;
+import es.unicabra.factions.ui.tools.RollSimulatorFragment;
 
 /**
- * <b>ToolsController</b>
+ * <b>RollSimulatorController</b>
  * This class contains all the methods to calculate all the parameters
  * that the user needs to adapt the monsters attributes.
- * This class is used by ToolsFragment like controller with the
+ * This class is used by RollSimulatorFragment like controller with the
  * purpose of keep the code clean and respect the MVC architecture.
  *
- * @see es.unicabra.factions.ui.tools.ToolsFragment
+ * @see RollSimulatorFragment
  * @author David Bermejo Simón
  */
-public class ToolsController {
+public class RollSimulatorController {
 
     private InitialValues initialValues;
     private CalculatedValues calculatedValues;
@@ -25,14 +26,14 @@ public class ToolsController {
     int[][] matrix;
     int[] vector;
 
-    public ToolsController(InitialValues initialValues,
-                           CalculatedValues calculatedValues) {
+    public RollSimulatorController(InitialValues initialValues,
+                                   CalculatedValues calculatedValues) {
         this.initialValues = initialValues;
         this.calculatedValues = calculatedValues;
         this.allValues = new Values(initialValues, calculatedValues);
     }
 
-    public ToolsController(int rolls, int dices) {
+    public RollSimulatorController(int rolls, int dices) {
         this.initialValues = new InitialValues(rolls, dices);
         this.calculatedValues = new CalculatedValues(rolls,dices);
         this.allValues = new Values(initialValues, calculatedValues);

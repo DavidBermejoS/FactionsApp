@@ -8,7 +8,7 @@ import java.util.Arrays;
  * This class is maded to storage all the initial values in the formula of attack and defense to
  * liberate the fragment of calculable values. in this parameters we storage the attack and
  * defense values of the monsters
- * @see: ToolsFragment
+ * @see: RollSimulatorFragment
  * @author: David Bermejo Simón.
  */
 public class InitialValues implements Serializable {
