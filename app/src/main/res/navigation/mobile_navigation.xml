@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/nav_cost_calculator"
         android:name="es.unicabra.factions.ui.cost_calculator.CostCalculatorFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_cost_calculator"
         tools:layout="@layout/fragment_cost_calculator" />
 
     <fragment
