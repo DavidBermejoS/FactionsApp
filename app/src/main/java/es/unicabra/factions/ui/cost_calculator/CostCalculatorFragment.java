@@ -73,9 +73,14 @@ public class CostCalculatorFragment extends Fragment {
         this.resultsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fillInitialValues();
-                resultValues = CostCalculatorController.getResults(initialValues);
-                printResults();
+                try{
+
+                    fillInitialValues();
+                    resultValues = CostCalculatorController.getResults(initialValues);
+                    printResults();
+                }catch(NullPointerException ex){
+                    Toast.makeText(getContext(),"¡Error! Debes introducir todos los valores",Toast.LENGTH_LONG);
+                }
             }
         });
     }

@@ -19,9 +19,11 @@
         <LinearLayout
             android:id="@+id/energyLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0000_energia"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
 
             <LinearLayout
@@ -36,21 +38,21 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="75dp"
                     android:layout_marginEnd="25dp"
+                    android:background="@null"
                     android:ems="0"
                     android:fontFamily="@font/architects_daughter"
                     android:gravity="clip_horizontal|center_horizontal|center_vertical"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:background="@null"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/energyResult"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.3"
+                android:layout_weight="0.27"
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
@@ -63,7 +65,9 @@
         <LinearLayout
             android:id="@+id/limitationLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0001_limitacion"
             android:orientation="horizontal">
 
@@ -79,21 +83,21 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="75dp"
                     android:layout_marginEnd="25dp"
+                    android:background="@null"
                     android:ems="0"
                     android:fontFamily="@font/architects_daughter"
                     android:gravity="clip_horizontal|center_horizontal|center_vertical"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:background="@null"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/limitationResult"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.3"
+                android:layout_weight="0.27"
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
@@ -106,9 +110,11 @@
         <LinearLayout
             android:id="@+id/psLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0002_ps"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -122,21 +128,21 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="75dp"
                     android:layout_marginEnd="25dp"
+                    android:background="@null"
                     android:ems="0"
                     android:fontFamily="@font/architects_daughter"
                     android:gravity="clip_horizontal|center_horizontal|center_vertical"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:background="@null"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/psResult"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.3"
+                android:layout_weight="0.27"
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
@@ -148,7 +154,9 @@
         <LinearLayout
             android:id="@+id/attackLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0006_atk"
             android:orientation="horizontal">
 
@@ -181,12 +189,12 @@
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
                         android:inputType="number"
-                        android:textSize="24sp"
-                        android:background="@null"/>
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/plusCharTextView"
@@ -205,12 +213,12 @@
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
                         android:inputType="number"
-                        android:textSize="24sp"
-                        android:background="@null"/>
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/d10TextView"
@@ -222,8 +230,7 @@
                         android:text="@string/d10"
                         android:textColor="@color/colorAccentFactions"
                         android:textSize="30sp"
-                        android:textStyle="bold"
-                        />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -246,7 +253,9 @@
         <LinearLayout
             android:id="@+id/defenseLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0005_def"
             android:orientation="horizontal">
 
@@ -279,12 +288,12 @@
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
                         android:inputType="number"
-                        android:textSize="24sp"
-                        android:background="@null"/>
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/plusCharTextView2"
@@ -303,12 +312,12 @@
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
                         android:inputType="number"
-                        android:textSize="24sp"
-                        android:background="@null"/>
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/d10TextView2"
@@ -339,13 +348,14 @@
                 android:textStyle="bold" />
 
 
-
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/pmLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0004_pm"
             android:orientation="horizontal">
 
@@ -361,21 +371,21 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="75dp"
                     android:layout_marginEnd="25dp"
+                    android:background="@null"
                     android:ems="0"
                     android:fontFamily="@font/architects_daughter"
                     android:gravity="clip_horizontal|center_horizontal|center_vertical"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:background="@null"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/pmResult"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.3"
+                android:layout_weight="0.27"
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
@@ -389,7 +399,9 @@
         <LinearLayout
             android:id="@+id/paLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0003_pa"
             android:orientation="horizontal">
 
@@ -405,21 +417,21 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="75dp"
                     android:layout_marginEnd="25dp"
+                    android:background="@null"
                     android:ems="0"
                     android:fontFamily="@font/architects_daughter"
                     android:gravity="clip_horizontal|center_horizontal|center_vertical"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:background="@null"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/paResult"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.3"
+                android:layout_weight="0.27"
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
@@ -432,9 +444,11 @@
         <LinearLayout
             android:id="@+id/hability1Layout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0009_habilidad2"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -601,7 +615,7 @@
 
             <TextView
                 android:id="@+id/hability1Results"
-                android:layout_width="80dp"
+                android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
                 android:ems="10"
@@ -615,7 +629,9 @@
         <LinearLayout
             android:id="@+id/hability2Layout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0009_habilidad2"
             android:orientation="horizontal">
 
@@ -784,7 +800,7 @@
 
             <TextView
                 android:id="@+id/hability2Results"
-                android:layout_width="80dp"
+                android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
                 android:ems="10"
@@ -799,7 +815,9 @@
         <LinearLayout
             android:id="@+id/hability3Layout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0009_habilidad2"
             android:orientation="horizontal">
 
@@ -968,7 +986,7 @@
 
             <TextView
                 android:id="@+id/hability3Results"
-                android:layout_width="80dp"
+                android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
                 android:ems="10"
@@ -983,7 +1001,9 @@
         <LinearLayout
             android:id="@+id/passiveLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/app_0001s_0010_pasiva"
             android:orientation="horizontal">
 
@@ -1060,8 +1080,7 @@
                         android:text="@string/d10"
                         android:textColor="@color/colorAccentFactions"
                         android:textSize="30sp"
-                        android:textStyle="bold"
-                        />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 

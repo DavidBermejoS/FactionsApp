@@ -11,17 +11,17 @@ import java.util.Arrays;
  * @author David Bermejo Simón
  */
 public class CostCalculatorValues {
-    private int energy;
-    private int limitation;
-    private int ps;
-    private  int[] attack;
-    private int [] defense;
-    private int pm;
-    private int pa;
-    private HabilityCostValues hability1;
-    private HabilityCostValues hability2;
-    private HabilityCostValues hability3;
-    private int [] passives;
+    private int energy=0;
+    private int limitation=0;
+    private int ps=0;
+    private  int[] attack={0,0};
+    private int [] defense={0,0};
+    private int pm=0;
+    private int pa=0;
+    private HabilityCostValues hability1 = new HabilityCostValues();
+    private HabilityCostValues hability2= new HabilityCostValues();
+    private HabilityCostValues hability3= new HabilityCostValues();
+    private int [] passives={0,0};
 
     public CostCalculatorValues() {
     }

@@ -16,4 +16,5 @@
 *.png
 /drawable/*
 /drawable-v24/*
+/src/main/res
 

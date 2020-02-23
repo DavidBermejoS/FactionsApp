@@ -4,17 +4,18 @@ package es.unicabra.factions.pojos.values;
  * Here are contained the results calculated from CostCalculatorValues parameters values.
  */
 public class CostCalculatorResults {
-    private int energy;
-    private int limitation;
-    private int ps;
-    private  int attack;
-    private int defense;
-    private int pm;
-    private int pa;
-    private int hability1;
-    private int hability2;
-    private int hability3;
-    private int passives;
+    private int energy=0;
+    private int limitation=0;
+    private int ps=0;
+    private  int attack=0;
+    private int defense=0;
+    private int pm=0;
+    private int pa=0;
+    private int hability1=0;
+    private int hability2=0;
+    private int hability3=0;
+    private int passives=0;
+    private int total=0;
 
     public CostCalculatorResults() {
     }
@@ -107,10 +108,18 @@ public class CostCalculatorResults {
         this.passives = passives;
     }
 
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
     @Override
     public String toString() {
-        return "CostCalculatorResults{" +"\n"+
-                "energy=" + energy + "\n"+
+        return "CostCalculatorResults{" + "\n"+
+                "energy=" + energy +"\n"+
                 ", limitation=" + limitation +"\n"+
                 ", ps=" + ps +"\n"+
                 ", attack=" + attack +"\n"+
@@ -121,6 +130,7 @@ public class CostCalculatorResults {
                 ", hability2=" + hability2 +"\n"+
                 ", hability3=" + hability3 +"\n"+
                 ", passives=" + passives +"\n"+
+                ", total=" + total +"\n"+
                 '}';
     }
 }

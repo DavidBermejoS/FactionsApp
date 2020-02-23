@@ -11,11 +11,11 @@ package es.unicabra.factions.pojos.values;
  * d10: the amount of d10 that will be throwed.
  */
 public class HabilityCostValues {
-    private int paValue;
-    private int rValue;
-    private int aValue;
-    private int fValue;
-    private int d10;
+    private int paValue=0;
+    private int rValue=0;
+    private int aValue=0;
+    private int fValue=0;
+    private int d10=0;
 
 
     public HabilityCostValues(int paValue, int rValue, int aValue, int f, int d10) {
