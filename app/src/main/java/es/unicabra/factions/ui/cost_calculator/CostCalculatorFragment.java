@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
@@ -23,6 +25,7 @@ import es.unicabra.factions.pojos.values.HabilityCostValues;
  * This class contain all the connection to the Graphical Elements.
  * Here is filled the initialValues object and it will send
  * the resultValues to the graphical interface.
+ *
  * @author David Bermejo Simón
  */
 public class CostCalculatorFragment extends Fragment {
@@ -52,10 +55,12 @@ public class CostCalculatorFragment extends Fragment {
     private TextView habiliy2Results;
     private TextView hability3Results;
     private TextView passiveResults;
+    private TextView resultBoxTextView;
 
     private Button resultsButton;
     private CostCalculatorValues initialValues;
     private CostCalculatorResults resultValues;
+    private ArrayList<EditText[]>  habilities;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -73,13 +78,12 @@ public class CostCalculatorFragment extends Fragment {
         this.resultsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
-
+                try {
                     fillInitialValues();
                     resultValues = CostCalculatorController.getResults(initialValues);
                     printResults();
-                }catch(NullPointerException ex){
-                    Toast.makeText(getContext(),"¡Error! Debes introducir todos los valores",Toast.LENGTH_LONG);
+                } catch (NullPointerException ex) {
+                    Toast.makeText(getContext(), "¡Error! Debes introducir todos los valores", Toast.LENGTH_LONG);
                 }
             }
         });
@@ -93,55 +97,89 @@ public class CostCalculatorFragment extends Fragment {
     private void fillInitialValues() {
         try {
             initialValues = new CostCalculatorValues();
-            initialValues.setEnergy(Integer.parseInt(energyEditText.getText().toString()));
-            initialValues.setLimitation(Integer.parseInt(limitationEditText.getText().toString()));
-            initialValues.setPs(Integer.parseInt(psEditText.getText().toString()));
-            int[] attacksValues = {
-                    Integer.parseInt(attackEditTexts[0].getText().toString()),
-                    Integer.parseInt(attackEditTexts[1].getText().toString())
-            };
+            if (!energyEditText.getText().toString().isEmpty()) {
+                initialValues.setEnergy(Integer.parseInt(energyEditText.getText().toString()));
+            }
+            if (!limitationEditText.getText().toString().isEmpty()) {
+                initialValues.setLimitation(Integer.parseInt(limitationEditText.getText().toString()));
+            }
+            if (!psEditText.getText().toString().isEmpty()) {
+                initialValues.setPs(Integer.parseInt(psEditText.getText().toString()));
+            }
+
+
+            //ATTACK VALUES
+            int[] attacksValues = new int[2];
+            for (int i = 0; i < attacksValues.length; i++) {
+                if (!attackEditTexts[i].getText().toString().isEmpty()) {
+                    attacksValues[i] = Integer.parseInt(attackEditTexts[i].getText().toString());
+                }else{
+                    attacksValues[i]=0;
+                }
+            }
             initialValues.setAttack(attacksValues);
-            int[] defenseValues = {
-                    Integer.parseInt(defenseEditTexts[0].getText().toString()),
-                    Integer.parseInt(defenseEditTexts[1].getText().toString())
-            };
+
+
+            //DEFENSE VALUES
+            int[] defenseValues = new int[2];
+            for (int i = 0; i < defenseValues.length; i++) {
+                if (!defenseEditTexts[i].getText().toString().isEmpty()) {
+                    defenseValues[i] = Integer.parseInt(defenseEditTexts[i].getText().toString());
+                }else{
+                    defenseValues[i]=0;
+                }
+            }
             initialValues.setDefense(defenseValues);
-            initialValues.setPm(Integer.parseInt(pmEditText.getText().toString()));
-            initialValues.setPa(Integer.parseInt(paEditText.getText().toString()));
-            HabilityCostValues h1 = new HabilityCostValues(
-                    Integer.parseInt(hability1EditTexts[0].getText().toString()),
-                    Integer.parseInt(hability1EditTexts[1].getText().toString()),
-                    Integer.parseInt(hability1EditTexts[2].getText().toString()),
-                    Integer.parseInt(hability1EditTexts[3].getText().toString()),
-                    Integer.parseInt(hability1EditTexts[4].getText().toString())
-            );
-            HabilityCostValues h2 = new HabilityCostValues(
-                    Integer.parseInt(hability2EditTexts[0].getText().toString()),
-                    Integer.parseInt(hability2EditTexts[1].getText().toString()),
-                    Integer.parseInt(hability2EditTexts[2].getText().toString()),
-                    Integer.parseInt(hability2EditTexts[3].getText().toString()),
-                    Integer.parseInt(hability2EditTexts[4].getText().toString())
-            );
-            HabilityCostValues h3 = new HabilityCostValues(
-                    Integer.parseInt(hability3EditTexts[0].getText().toString()),
-                    Integer.parseInt(hability3EditTexts[1].getText().toString()),
-                    Integer.parseInt(hability3EditTexts[2].getText().toString()),
-                    Integer.parseInt(hability3EditTexts[3].getText().toString()),
-                    Integer.parseInt(hability3EditTexts[4].getText().toString())
-            );
-            initialValues.setHability1(h1);
-            initialValues.setHability2(h2);
-            initialValues.setHability3(h3);
-            int [] passives = {
-                    Integer.parseInt(passiveEditTexts[0].getText().toString()),
-                    Integer.parseInt(passiveEditTexts[1].getText().toString())
-            };
+
+
+            if(!pmEditText.getText().toString().isEmpty()){
+                initialValues.setPm(Integer.parseInt(pmEditText.getText().toString()));
+            }
+            if(!paEditText.getText().toString().isEmpty()){
+                initialValues.setPa(Integer.parseInt(paEditText.getText().toString()));
+            }
+
+            //HABILITIES
+            initialValues.setHability1(getHabilityByIndex(0));
+            initialValues.setHability2(getHabilityByIndex(1));
+            initialValues.setHability3(getHabilityByIndex(2));
+
+
+            //PASSIVES
+            int[] passives = new int[2];
+            for (int i = 0; i < passives.length; i++) {
+                if(!passiveEditTexts[i].getText().toString().isEmpty()){
+                    passives[i]=Integer.parseInt(passiveEditTexts[i].getText().toString());
+                }else{
+                    passives[i]=0;
+                }
+            }
             initialValues.setPassives(passives);
-            System.out.println(initialValues.toString());
         } catch (Exception e) {
             System.out.println(e.getLocalizedMessage());
             Toast.makeText(this.getContext(), "Error en la introducción de valores", Toast.LENGTH_LONG).show();
         }
+    }
+
+    private HabilityCostValues getHabilityByIndex(int index) {
+        EditText[]habilityEditText = habilities.get(index);
+        HabilityCostValues hability = new HabilityCostValues();
+        if (!habilityEditText[0].getText().toString().isEmpty()){
+            hability.setPaValue(Integer.parseInt(habilityEditText[0].getText().toString()));
+        }
+        if (!habilityEditText[1].getText().toString().isEmpty()){
+            hability.setrValue(Integer.parseInt(habilityEditText[1].getText().toString()));
+        }
+        if (!habilityEditText[2].getText().toString().isEmpty()){
+            hability.setaValue(Integer.parseInt(habilityEditText[2].getText().toString()));
+        }
+        if (!habilityEditText[3].getText().toString().isEmpty()){
+            hability.setfValue(Integer.parseInt(habilityEditText[3].getText().toString()));
+        }
+        if (!habilityEditText[4].getText().toString().isEmpty()){
+            hability.setD10(Integer.parseInt(habilityEditText[4].getText().toString()));
+        }
+        return hability;
     }
 
     private void attachGraphicElements(View root) {
@@ -173,6 +211,11 @@ public class CostCalculatorFragment extends Fragment {
         this.hability3EditTexts[3] = root.findViewById(R.id.fHability3Variable);
         this.hability3EditTexts[4] = root.findViewById(R.id.d10Hability3Variable);
 
+        habilities = new ArrayList<>();
+        habilities.add(hability1EditTexts);
+        habilities.add(hability2EditTexts);
+        habilities.add(hability3EditTexts);
+
         this.passiveEditTexts[0] = root.findViewById(R.id.firstPassiveVariable);
         this.passiveEditTexts[1] = root.findViewById(R.id.secondPassiveVariable);
 
@@ -187,6 +230,7 @@ public class CostCalculatorFragment extends Fragment {
         this.habiliy2Results = root.findViewById(R.id.hability2Results);
         this.hability3Results = root.findViewById(R.id.hability3Results);
         this.passiveResults = root.findViewById(R.id.passiveResults);
+        this.resultBoxTextView=root.findViewById(R.id.resultsBoxTextView);
     }
 
     private void printResults() {
@@ -202,5 +246,7 @@ public class CostCalculatorFragment extends Fragment {
         this.habiliy2Results.setText(String.valueOf(resultValues.getHability2()));
         this.hability3Results.setText(String.valueOf(resultValues.getHability3()));
         this.passiveResults.setText(String.valueOf(resultValues.getPassives()));
+        this.resultBoxTextView.setText(String.valueOf(resultValues.getTotal()));
+
     }
 }

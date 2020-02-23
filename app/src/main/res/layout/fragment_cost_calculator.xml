@@ -42,6 +42,7 @@
                     android:ems="0"
                     android:fontFamily="@font/architects_daughter"
                     android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                    android:hint="@string/zero"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="30sp"
@@ -87,6 +88,7 @@
                     android:ems="0"
                     android:fontFamily="@font/architects_daughter"
                     android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                    android:hint="@string/zero"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="30sp"
@@ -132,6 +134,7 @@
                     android:ems="0"
                     android:fontFamily="@font/architects_daughter"
                     android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                    android:hint="@string/zero"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="30sp"
@@ -193,6 +196,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="24sp" />
 
@@ -217,6 +221,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="24sp" />
 
@@ -292,6 +297,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="24sp" />
 
@@ -316,6 +322,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="24sp" />
 
@@ -375,6 +382,7 @@
                     android:ems="0"
                     android:fontFamily="@font/architects_daughter"
                     android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                    android:hint="@string/zero"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="30sp"
@@ -421,6 +429,7 @@
                     android:ems="0"
                     android:fontFamily="@font/architects_daughter"
                     android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                    android:hint="@string/zero"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="30sp"
@@ -485,6 +494,7 @@
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -510,6 +520,7 @@
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -535,6 +546,7 @@
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -568,6 +580,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -593,6 +606,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -670,6 +684,7 @@
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -695,6 +710,7 @@
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -720,6 +736,7 @@
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -753,6 +770,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -778,6 +796,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -856,6 +875,7 @@
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -881,6 +901,7 @@
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -906,6 +927,7 @@
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -939,6 +961,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -964,6 +987,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -1041,6 +1065,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -1066,6 +1091,7 @@
                         android:ems="10"
                         android:fontFamily="@font/architects_daughter"
                         android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
                         android:inputType="number"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -1101,21 +1127,41 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:gravity="clip_horizontal|center_horizontal|fill_horizontal"
-            android:orientation="horizontal">
+            android:gravity="clip_horizontal|center_horizontal|fill_horizontal">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-                <Button
-                    android:id="@+id/resultsButton"
-                    android:layout_width="100dp"
+                android:gravity="clip_horizontal|clip_vertical|center_horizontal|center_vertical">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/resultsButton"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:background="@drawable/app_0001s_0011_moneda_copia" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/resultsBoxTextView"
+                    android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginRight="0dp"
-                    android:background="@drawable/app_0001s_0011_moneda_copia" />
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/app_redone_0000_dad2copia_4"
+                    android:textAlignment="gravity"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
