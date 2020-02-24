@@ -1,7 +1,7 @@
 ___
 # FACTION'S APP
 ___
-- Current Version: v1.0.0
+- Current Version: v2.0.0
 - Authors:
 -- David Bermejo Simón (Software and Systems Developer).
 -- David Carpintero González (Product Owner and Graphic Designer)
@@ -22,3 +22,6 @@ In following updates will be introduced a cost calculator for our monsters and c
 ___
 
 ## Change Log.
+- v1.0.0: Main Menu functionalities and roll generator with calculator to simulate the cards values.
+- v1.2.0: All the problems with the previous version are fixed in this feature.  
+- v2.0.0: Added new feature to calculate the cost of the habilities and parameters of the monsters.
