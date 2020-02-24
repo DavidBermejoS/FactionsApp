@@ -185,7 +185,7 @@ public class CostCalculatorFragment extends Fragment {
     private void attachGraphicElements(View root) {
         this.energyEditText = root.findViewById(R.id.energyEditText);
         this.limitationEditText = root.findViewById(R.id.limitationEditText);
-        this.psEditText = root.findViewById(R.id.pmEditText);
+        this.psEditText = root.findViewById(R.id.psEditText);
         this.pmEditText = root.findViewById(R.id.pmEditText);
         this.paEditText = root.findViewById(R.id.paEditText);
         this.attackEditTexts[0] = root.findViewById(R.id.firstAttackVariable);
