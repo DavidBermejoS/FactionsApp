@@ -1,7 +1,1170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/constraintLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/app_redone_0003_capa_19"/>
+    android:background="@drawable/app_redone_0003_capa_19"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/energyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0000_energia"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/energyEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@null"
+                    android:ems="0"
+                    android:fontFamily="@font/architects_daughter"
+                    android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                    android:hint="@string/zero"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/energyResult"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/limitationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0001_limitacion"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/limitationEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@null"
+                    android:ems="0"
+                    android:fontFamily="@font/architects_daughter"
+                    android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                    android:hint="@string/zero"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/limitationResult"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/psLayout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0002_ps"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/psEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@null"
+                    android:ems="0"
+                    android:fontFamily="@font/architects_daughter"
+                    android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                    android:hint="@string/zero"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/psResult"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/attackLayout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0006_atk"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="80dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fCharTextView"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/charF"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/firstAttackVariable"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/plusCharTextView"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/plusChar"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/secondAttackVariable"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/d10TextView"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/d10"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/attackResults"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/defenseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0005_def"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="80dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fCharTextView2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/charF"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/firstDefenseVariable"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/plusCharTextView2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/plusChar"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/secondDefenseVariable"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/d10TextView2"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/d10"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/defenseResults"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pmLayout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0004_pm"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/pmEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@null"
+                    android:ems="0"
+                    android:fontFamily="@font/architects_daughter"
+                    android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                    android:hint="@string/zero"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pmResult"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paLayout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0003_pa"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/paEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@null"
+                    android:ems="0"
+                    android:fontFamily="@font/architects_daughter"
+                    android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                    android:hint="@string/zero"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/paResult"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hability1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0009_habilidad2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="80dp"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/paTextView"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:text="@string/paText"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/paHability1EditText"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/barAndRTextView"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:text="@string/barAndR"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/rHability1EditText"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/barAndACharTextView"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:text="@string/barAndA"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/aHabitliy1EditText"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fCharTextView3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/charF"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/fHabilityVariable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/plusCharTextView3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/plusChar"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/d10HabilityVariable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/d10TextView3"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/d10"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hability1Results"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hability2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0009_habilidad2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="80dp"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/paTextView2"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:text="@string/paText"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/paHability2EditText"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/barAndRTextView2"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:text="@string/barAndR"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/rHability2EditText"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/barAndACharTextView2"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:text="@string/barAndA"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/aHabitliy2EditText"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fCharTextView4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/charF"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/fHability2Variable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/plusCharTextView4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/plusChar"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/d10Hability2Variable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/d10TextView4"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/d10"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hability2Results"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hability3Layout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0009_habilidad2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="80dp"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/paTextView3"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:text="@string/paText"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/paHability3EditText"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/barAndRTextView3"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:text="@string/barAndR"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/rHability3EditText"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/barAndACharTextView3"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:text="@string/barAndA"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/aHabitliy3EditText"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fCharTextView5"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/charF"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/fHability3Variable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/plusCharTextView5"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/plusChar"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/d10Hability3Variable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/d10TextView5"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/d10"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hability3Results"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/passiveLayout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/app_0001s_0010_pasiva"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="80dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fCharTextView6"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/charF"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/firstPassiveVariable"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/plusCharTextView6"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/plusChar"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/secondPassiveVariable"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="@string/zero"
+                        android:inputType="number"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/d10TextView6"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/architects_daughter"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/d10"
+                        android:textColor="@color/colorAccentFactions"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/passiveResults"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="clip_horizontal|center_horizontal|fill_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="clip_horizontal|clip_vertical|center_horizontal|center_vertical">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/resultsButton"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:background="@drawable/app_0001s_0011_moneda_copia" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/resultsBoxTextView"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/app_redone_0000_dad2copia_4"
+                    android:fontFamily="@font/architects_daughter"
+                    android:gravity="clip_horizontal|clip_vertical|center_horizontal|fill_horizontal|center_vertical|fill_vertical"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

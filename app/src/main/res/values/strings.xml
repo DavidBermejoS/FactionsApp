@@ -21,7 +21,6 @@
     <string name="domainUnicabra">www.unicabra.es</string>
     <string name="max">Max:</string>
     <string name="min">Min:</string>
-    <string name="zero">0</string>
     <string name="textModa">Moda:</string>
     <string name="plus">+</string>
     <string name="d10">d10</string>
@@ -31,4 +30,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="SeeResults">See Results</string>
     <string name="titleToolResults">Resultados por tirada</string>
+    <string name="charF">F</string>
+    <string name="plusChar">+</string>
+    <string name="paText">PA</string>
+    <string name="barAndR">/R</string>
+    <string name="barAndA">/A</string>
+    <string name="zero">0</string>
 </resources>
