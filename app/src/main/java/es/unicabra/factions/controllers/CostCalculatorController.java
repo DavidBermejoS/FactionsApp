@@ -38,7 +38,10 @@ public class CostCalculatorController {
     }
 
     private static void calculatePassives()  throws NullPointerException{
-        int totalPassives = (values.getPassives()[0] * 3 + values.getPassives()[1] * 10) + 10;
+        int totalPassives=0;
+        if(values.getPassives()[0]!=0 || values.getPassives()[1]!=0){
+            totalPassives = (values.getPassives()[0] * 3 + values.getPassives()[1] * 10) + 10;
+        }
         resultValues.setPassives(totalPassives);
     }
 
