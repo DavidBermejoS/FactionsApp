@@ -58,7 +58,7 @@
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -103,8 +103,9 @@
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:paddingBottom="5dp"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -150,7 +151,7 @@
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -184,7 +185,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="@string/charF"
                         android:textColor="@color/colorAccentFactions"
-                        android:textSize="30sp"
+                        android:textSize="28sp"
                         android:textStyle="bold" />
 
                     <EditText
@@ -209,7 +210,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="@string/plusChar"
                         android:textColor="@color/colorAccentFactions"
-                        android:textSize="30sp"
+                        android:textSize="28sp"
                         android:textStyle="bold" />
 
                     <EditText
@@ -234,7 +235,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="@string/d10"
                         android:textColor="@color/colorAccentFactions"
-                        android:textSize="30sp"
+                        android:textSize="28sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -245,12 +246,15 @@
                 android:id="@+id/attackResults"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:paddingStart="5dp"
+                android:paddingBottom="5dp"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -285,7 +289,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="@string/charF"
                         android:textColor="@color/colorAccentFactions"
-                        android:textSize="30sp"
+                        android:textSize="28sp"
                         android:textStyle="bold" />
 
                     <EditText
@@ -310,7 +314,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="@string/plusChar"
                         android:textColor="@color/colorAccentFactions"
-                        android:textSize="30sp"
+                        android:textSize="28sp"
                         android:textStyle="bold" />
 
                     <EditText
@@ -335,7 +339,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="@string/d10"
                         android:textColor="@color/colorAccentFactions"
-                        android:textSize="30sp"
+                        android:textSize="28sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -346,12 +350,14 @@
                 android:id="@+id/defenseResults"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:paddingStart="5dp"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
 
@@ -398,7 +404,7 @@
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
 
@@ -444,8 +450,9 @@
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:paddingBottom="5dp"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -635,8 +642,9 @@
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:paddingStart="10dp"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -825,8 +833,9 @@
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:paddingStart="10dp"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -1016,8 +1025,9 @@
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:paddingStart="10dp"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -1120,8 +1130,9 @@
                 android:ems="10"
                 android:fontFamily="@font/architects_daughter"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:paddingStart="10dp"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
